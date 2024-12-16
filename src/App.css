@@ -1,0 +1,324 @@
+/* Style général du corps de la page */
+body {
+  display: flex;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f8fa; /* Fond clair et neutre */
+  color: #333; /* Texte sombre pour la lisibilité */
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Style pour l'application */
+.app {
+  max-width: 910px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #ffffff; /* Fond blanc pour un look épuré */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre discrète */
+  transition: box-shadow 0.3s ease;
+}
+
+/* En-tête */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #0077ff;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Bouton de mode sombre/claire */
+.theme-toggle {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 24px;
+  background-color: #127df7; /* Bleu clair */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background-color: #0582ff; /* Couleur plus sombre au survol */
+  transform: scale(1.05);
+}
+
+/* Barre de recherche */
+.search-bar input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #D1D3D8; /* Bordure neutre */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+  border-color: #0077ff; /* Bordure bleue au focus */
+  outline: none;
+}
+
+/* Zone d'ajout de tâche */
+.input-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-container input,
+.input-container select,
+.input-container button {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid #D1D3D8; /* Bordure neutre */
+  transition: all 0.3s ease;
+}
+
+.input-container input[type="text"] {
+  flex-grow: 1;
+}
+
+.input-container select,
+.input-container input[type="date"] {
+  width: 180px;
+}
+
+.input-container button {
+  background-color: #0077ff; 
+  width: 140px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.input-container button:hover {
+  background-color: #0080ff; 
+  transform: scale(1.05);
+}
+
+/* Boutons de filtre */
+.filter-buttons button {
+  padding: 12px 24px;
+  background-color: #0077ff; 
+  border: none;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-buttons button.active {
+  background-color: #0b7dff; 
+  color: white;
+}
+
+.filter-buttons button:hover {
+  background-color: #409af4; 
+  transform: scale(1.05);
+}
+
+/* Liste des tâches */
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  /* background-color: #F9FAFB;  */
+  background-color: #D1D3D8;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 2px solid #E4E7EB; /* Bordure subtile */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #388E3C; 
+}
+
+
+.task-list li.overdue {
+  background-color: #FFE1E1; 
+  border-left: 8px solid #E74C3C; /* Bordure rouge pour les tâches en retard */
+}
+
+.task-list li:hover {
+  background-color: #bcbcbc; /* Légère ombre au survol */
+  transform: scale(1.02);
+}
+
+.task-list .task-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list .task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-list .task-actions button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.task-list .task-actions .complete {
+  background-color: #4CAF50; /* Vert pour terminer */
+  color: white;
+}
+
+.task-list .task-actions .complete:hover {
+  background-color: #388E3C; /* Vert plus foncé au survol */
+  transform: scale(1.05);
+}
+
+.task-list .task-actions .delete {
+  background-color: #E74C3C; /* Rouge pour supprimer */
+  color: white;
+}
+
+.task-list .task-actions .delete:hover {
+  background-color: #C0392B; /* Rouge plus foncé au survol */
+  transform: scale(1.05);
+}
+
+/* Statistiques des tâches */
+.task-stats {
+  background-color: #F1F5F9; 
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.task-stats p {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+body.dark-mode {
+  background-color: #121212; /* Arrière-plan noir */
+  color: white; /* Texte en blanc */
+}
+
+.app.dark-mode {
+  background-color: #393737;
+  color: white;
+}
+
+
+/* Optionnel : Styliser le bouton du toggle */
+.ui-switch input:checked + .slider {
+  background-color: #a7a7a7; /* Par exemple, un vert lorsque activé */
+}
+
+.ui-switch input:checked + .slider .circle {
+  transform: translateX(10px); 
+}
+
+/* switch settings 👇 */
+
+.ui-switch {
+  /* switch */
+  --switch-bg: rgb(135, 150, 165);
+  --switch-width: 48px;
+  --switch-height: 20px;
+  /* circle */
+  --circle-diameter: 32px;
+  --circle-bg: rgb(0, 56, 146);
+  --circle-inset: calc((var(--circle-diameter) - var(--switch-height)) / 2);
+}
+
+.ui-switch input {
+  display: none;
+}
+
+.slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  background: var(--switch-bg);
+  border-radius: 999px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider .circle {
+  top: calc(var(--circle-inset) * -1);
+  left: 0;
+  width: var(--circle-diameter);
+  height: var(--circle-diameter);
+  position: absolute;
+  background: var(--circle-bg);
+  border-radius: inherit;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTkuMzA1IDEuNjY3VjMuNzVoMS4zODlWMS42NjdoLTEuMzl6bS00LjcwNyAxLjk1bC0uOTgyLjk4Mkw1LjA5IDYuMDcybC45ODItLjk4Mi0xLjQ3My0xLjQ3M3ptMTAuODAyIDBMMTMuOTI3IDUuMDlsLjk4Mi45ODIgMS40NzMtMS40NzMtLjk4Mi0uOTgyek0xMCA1LjEzOWE0Ljg3MiA0Ljg3MiAwIDAwLTQuODYyIDQuODZBNC44NzIgNC44NzIgMCAwMDEwIDE0Ljg2MiA0Ljg3MiA0Ljg3MiAwIDAwMTQuODYgMTAgNC44NzIgNC44NzIgMCAwMDEwIDUuMTM5em0wIDEuMzg5QTMuNDYyIDMuNDYyIDAgMDExMy40NzEgMTBhMy40NjIgMy40NjIgMCAwMS0zLjQ3MyAzLjQ3MkEzLjQ2MiAzLjQ2MiAwIDAxNi41MjcgMTAgMy40NjIgMy40NjIgMCAwMTEwIDYuNTI4ek0xLjY2NSA5LjMwNXYxLjM5aDIuMDgzdi0xLjM5SDEuNjY2em0xNC41ODMgMHYxLjM5aDIuMDg0di0xLjM5aC0yLjA4NHpNNS4wOSAxMy45MjhMMy42MTYgMTUuNGwuOTgyLjk4MiAxLjQ3My0xLjQ3My0uOTgyLS45ODJ6bTkuODIgMGwtLjk4Mi45ODIgMS40NzMgMS40NzMuOTgyLS45ODItMS40NzMtMS40NzN6TTkuMzA1IDE2LjI1djIuMDgzaDEuMzg5VjE2LjI1aC0xLjM5eiIgLz4KPC9zdmc+");
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition: left 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12);
+  ;
+}
+
+.slider .circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: inherit;
+  -webkit-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms;
+  opacity: 0;
+}
+
+/* actions */
+
+.ui-switch input:checked+.slider .circle {
+  left: calc(100% - var(--circle-diameter));
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjAiIHdpZHRoPSIyMCIgdmlld0JveD0iMCAwIDIwIDIwIj4KICAgIDxwYXRoIGZpbGw9IiNmZmYiCiAgICAgICAgZD0iTTQuMiAyLjVsLS43IDEuOC0xLjguNyAxLjguNy43IDEuOC42LTEuOEw2LjcgNWwtMS45LS43LS42LTEuOHptMTUgOC4zYTYuNyA2LjcgMCAxMS02LjYtNi42IDUuOCA1LjggMCAwMDYuNiA2LjZ6IiAvPgo8L3N2Zz4=");
+}
+
+.ui-switch input:active+.slider .circle::before {
+  -webkit-transition: 0s;
+  -o-transition: 0s;
+  transition: 0s;
+  opacity: 1;
+  width: 0;
+  height: 0;
+}
