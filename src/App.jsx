@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css'; // Importation du fichier CSS
+import './App.css'; 
 
 function App() {
   const [tasks, setTasks] = useState(() => {
@@ -66,12 +66,6 @@ function App() {
   return (
     <div className="app">
       <h1>To-Do List 
-        {/* <label class="ui-switch">
-          <input type="checkbox"></input>
-          <div class="slider">
-            <div class="circle"></div>
-          </div>
-        </label> */}
         <label className="ui-switch">
           <input 
             type="checkbox" 
