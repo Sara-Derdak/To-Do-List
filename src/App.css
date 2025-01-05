@@ -1,7 +1,12 @@
-/* Style général du corps de la page */
+*{
+  text-align: center;
+
+}
+
 body {
   display: flex;
   justify-content: center;
+  text-align: center;
   font-family: 'Arial', sans-serif;
   background-color: #f7f8fa; /* Fond clair et neutre */
   color: #333; /* Texte sombre pour la lisibilité */
@@ -19,6 +24,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ombre discrète */
   transition: box-shadow 0.3s ease;
+  align-self: center;
+  margin-top: 20px;
 }
 
 /* En-tête */
