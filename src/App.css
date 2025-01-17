@@ -121,6 +121,19 @@ h1 {
   margin: 0 10px;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
+@media (max-width: 767px) {
+  .filter-buttons button {
+    display: block;
+    margin: auto;
+    margin-bottom: 6px;
+  }
+  .input-container input,
+.input-container select,
+.input-container button
+{
+  margin: auto;
+}
+}
 
 .filter-buttons button.active {
   background-color: #0b7dff; 
